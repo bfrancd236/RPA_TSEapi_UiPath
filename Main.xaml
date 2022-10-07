@@ -1,0 +1,1010 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="801,1468" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:utia="clr-namespace:UiPath.Twilio.IntegrationService.Activities;assembly=UiPath.Twilio.IntegrationService.Activities" xmlns:utic="clr-namespace:UiPath.Twilio.IntegrationService.Client;assembly=UiPath.Twilio.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Form.Activities</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Activities.System.Arrays</x:String>
+      <x:String>UiPath.Twilio.Activities.Models</x:String>
+      <x:String>UiPath.Twilio.Activities</x:String>
+      <x:String>UiPath.ContactCenterIntegrations</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.Twilio.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="68">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.Twilio.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.ContactCenterIntegrations</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.Twilio.IntegrationService.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="476,1403" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="JSONresponde" />
+      <Variable x:TypeArguments="x:Int32" Name="StatusCode" />
+      <Variable x:TypeArguments="njl:JObject" Name="jsonObject" />
+      <Variable x:TypeArguments="x:Int32" Name="nuIndex" />
+      <Variable x:TypeArguments="s:String[]" Name="ArrayCand" />
+      <Variable x:TypeArguments="x:String" Name="resultCandidatos" />
+      <Variable x:TypeArguments="uibi:ResponseStatus" Name="responseMensagem" />
+      <Variable x:TypeArguments="x:String" Name="teste" />
+      <Variable x:TypeArguments="scg:IList(x:String)" Name="Lista" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/br/br-c0001-e000544-r.json" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" Password="[Nothing]" Result="[JSONresponde]" StatusCode="[StatusCode]" TimeoutMS="6000" Username="[Nothing]">
+      <ui:HttpClient.Attachments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Attachments>
+      <ui:HttpClient.Cookies>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Cookies>
+      <ui:HttpClient.Headers>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Headers>
+      <ui:HttpClient.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Parameters>
+      <ui:HttpClient.UrlSegments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.UrlSegments>
+    </ui:HttpClient>
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonObject]" JsonString="[JSONresponde]" />
+    <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[nuIndex]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,467" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[jsonObject(&quot;cand&quot;)]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="304,343" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If Condition="[nuIndex=2]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Break sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Break_1" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[resultCandidatos]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String" xml:space="preserve">[resultCandidatos+" | "+"Candidato nº  "+(nuIndex+1).ToString+" - "+jsonObject("cand")(nuIndex)("pvap").ToString+"%"]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[nuIndex]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[nuIndex+1]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[resultCandidatos]" />
+    <utia:SendMessage ConfiguredBusinessEntity="Messages" ConnectionId="31ad9365-7744-ed11-a27c-0003ffe769fe" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="434,362" sap2010:WorkflowViewState.IdRef="SendMessage_1" Status="[responseMensagem]" UseConnectionService="True">
+      <utia:SendMessage.BusinessEntity>
+        <uibi:BusinessEntity Name="Messages">
+          <uibi:BusinessEntity.AllFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Sid" DisplayName="SID" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="True" IsMandatory="False" IsSelected="False" Location="Undefined" Name="Response.Sid" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="utic:Messages" ArgumentDirection="In" ArgumentType="utic:Messages" DataType="Messages" Description="The Messages object." DisplayName="Messages" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="True" IsSelected="False" Location="Undefined" Name="body" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="utic:Messages" x:Name="__ReferenceID4" ArgumentDirection="Out" ArgumentType="utic:Messages" DataType="Messages" Description="The JSON response of a call" DisplayName="Message response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID1" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The destination phone number. Add prefix &quot;whatsapp:&quot; before the phone number for sending whatsapp message" DisplayName="To" FormDataType="ExpressionTextBox" InArgumentValue="SEU NÚMERO" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsSelected="False" Location="Undefined" Name="body.To" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">SEU NÚMERO</InArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The source phone number. Add prefix &quot;whatsapp:&quot; before the phone number for sending whatsapp message. This must be a registered Twilio number and approved by whatsapp (for sending whatsapp messages)" DisplayName="From" FormDataType="ExpressionTextBox" InArgumentValue="NÚMERO DO TWILIO" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsSelected="False" Location="Undefined" Name="body.From" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">NÚMERO DO TWILIO</InArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The message to be sent" DisplayName="Body" FormDataType="ExpressionTextBox" InArgumentValue="[resultCandidatos]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsSelected="False" Location="Undefined" Name="body.Body" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">[resultCandidatos]</InArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+              </uiisi:OperationEntityField>
+            </scg:List>
+          </uibi:BusinessEntity.AllFields>
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID0}" DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages" />
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.Metadata>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+              <x:String x:Key="Object">Messages</x:String>
+              <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
+              <x:String x:Key="Operation">CreateMessage</x:String>
+              <x:String x:Key="Path">/Messages</x:String>
+            </scg:Dictionary>
+          </uibi:BusinessEntity.Metadata>
+          <uibi:BusinessEntity.SelectedFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
+              <x:Reference>__ReferenceID1</x:Reference>
+              <x:Reference>__ReferenceID2</x:Reference>
+              <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
+            </scg:List>
+          </uibi:BusinessEntity.SelectedFields>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </utia:SendMessage.BusinessEntity>
+      <utia:SendMessage.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="31ad9365-7744-ed11-a27c-0003ffe769fe" ConnectionName="2022-10-05T06:30:36.634">
+          <uiisi:ConnectionParameters.ClientInfo>
+            <uiisi:ClientInfo ClientAssembly="UiPath.Twilio.IntegrationService" ClientNamespace="UiPath.Twilio.IntegrationService">
+              <uiisi:ClientInfo.ConnectorMetadata>
+                <uiisi:ConnectorMetadata HasDiscoveryAPI="False" Key="uipath-twilio-messaging" Version="1.0.0">
+                  <uiisi:ConnectorMetadata.ActivitiesSettings>
+                    <scg:Dictionary x:TypeArguments="x:String, uiisi:ActivitySettings">
+                      <uiisi:ActivitySettings x:Key="GetRecord" EnableSampleValues="False" EnableSampleValuesTest="False" ShowAllFields="True" ShowConfigureButton="True">
+                        <uiisi:ActivitySettings.ObjectsToExclude>
+                          <scg:List x:TypeArguments="x:String" Capacity="0" />
+                        </uiisi:ActivitySettings.ObjectsToExclude>
+                        <uiisi:ActivitySettings.Properties>
+                          <scg:List x:TypeArguments="uiisi:ActivityProperty" Capacity="0" />
+                        </uiisi:ActivitySettings.Properties>
+                        <uiisi:ActivitySettings.PropertyCategories>
+                          <scg:List x:TypeArguments="uiisi:PropertyCategory" Capacity="0" />
+                        </uiisi:ActivitySettings.PropertyCategories>
+                      </uiisi:ActivitySettings>
+                      <uiisi:ActivitySettings x:Key="InsertRecord" EnableSampleValues="False" EnableSampleValuesTest="True" ShowAllFields="True" ShowConfigureButton="True">
+                        <uiisi:ActivitySettings.ObjectsToExclude>
+                          <scg:List x:TypeArguments="x:String" Capacity="0" />
+                        </uiisi:ActivitySettings.ObjectsToExclude>
+                        <uiisi:ActivitySettings.Properties>
+                          <scg:List x:TypeArguments="uiisi:ActivityProperty" Capacity="0" />
+                        </uiisi:ActivitySettings.Properties>
+                        <uiisi:ActivitySettings.PropertyCategories>
+                          <scg:List x:TypeArguments="uiisi:PropertyCategory" Capacity="0" />
+                        </uiisi:ActivitySettings.PropertyCategories>
+                      </uiisi:ActivitySettings>
+                      <uiisi:ActivitySettings x:Key="UpsertRecord" EnableSampleValues="False" EnableSampleValuesTest="True" ShowAllFields="True" ShowConfigureButton="True">
+                        <uiisi:ActivitySettings.ObjectsToExclude>
+                          <scg:List x:TypeArguments="x:String" Capacity="0" />
+                        </uiisi:ActivitySettings.ObjectsToExclude>
+                        <uiisi:ActivitySettings.Properties>
+                          <scg:List x:TypeArguments="uiisi:ActivityProperty" Capacity="0" />
+                        </uiisi:ActivitySettings.Properties>
+                        <uiisi:ActivitySettings.PropertyCategories>
+                          <scg:List x:TypeArguments="uiisi:PropertyCategory" Capacity="0" />
+                        </uiisi:ActivitySettings.PropertyCategories>
+                      </uiisi:ActivitySettings>
+                      <uiisi:ActivitySettings x:Key="ListRecords" EnableSampleValues="False" EnableSampleValuesTest="False" ShowAllFields="True" ShowConfigureButton="True">
+                        <uiisi:ActivitySettings.ObjectsToExclude>
+                          <scg:List x:TypeArguments="x:String" Capacity="4">
+                            <x:String>Calls::Events</x:String>
+                          </scg:List>
+                        </uiisi:ActivitySettings.ObjectsToExclude>
+                        <uiisi:ActivitySettings.Properties>
+                          <scg:List x:TypeArguments="uiisi:ActivityProperty" Capacity="0" />
+                        </uiisi:ActivitySettings.Properties>
+                        <uiisi:ActivitySettings.PropertyCategories>
+                          <scg:List x:TypeArguments="uiisi:PropertyCategory" Capacity="0" />
+                        </uiisi:ActivitySettings.PropertyCategories>
+                      </uiisi:ActivitySettings>
+                      <uiisi:ActivitySettings x:Key="ListAllRecords" EnableSampleValues="False" EnableSampleValuesTest="False" ShowAllFields="True" ShowConfigureButton="True">
+                        <uiisi:ActivitySettings.ObjectsToExclude>
+                          <scg:List x:TypeArguments="x:String" Capacity="4">
+                            <x:String>Calls::Events</x:String>
+                          </scg:List>
+                        </uiisi:ActivitySettings.ObjectsToExclude>
+                        <uiisi:ActivitySettings.Properties>
+                          <scg:List x:TypeArguments="uiisi:ActivityProperty" Capacity="0" />
+                        </uiisi:ActivitySettings.Properties>
+                        <uiisi:ActivitySettings.PropertyCategories>
+                          <scg:List x:TypeArguments="uiisi:PropertyCategory" Capacity="0" />
+                        </uiisi:ActivitySettings.PropertyCategories>
+                      </uiisi:ActivitySettings>
+                      <uiisi:ActivitySettings x:Key="SendMessage" EnableSampleValues="False" EnableSampleValuesTest="False" ShowAllFields="True" ShowConfigureButton="False">
+                        <uiisi:ActivitySettings.ObjectsToExclude>
+                          <scg:List x:TypeArguments="x:String" Capacity="0" />
+                        </uiisi:ActivitySettings.ObjectsToExclude>
+                        <uiisi:ActivitySettings.Properties>
+                          <scg:List x:TypeArguments="uiisi:ActivityProperty" Capacity="4">
+                            <uiisi:ActivityProperty Description="The destination phone number. Add prefix &quot;whatsapp:&quot; before the phone number for sending whatsapp message" DisplayName="To" FieldName="body.To" IsHidden="False" IsRequired="True">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                            <uiisi:ActivityProperty Description="The source phone number. Add prefix &quot;whatsapp:&quot; before the phone number for sending whatsapp message. This must be a registered Twilio number and approved by whatsapp (for sending whatsapp messages)" DisplayName="From" FieldName="body.From" IsHidden="False" IsRequired="True">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                            <uiisi:ActivityProperty Description="The message to be sent" DisplayName="Body" FieldName="body.Body" IsHidden="False" IsRequired="True">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                            <uiisi:ActivityProperty Description="The JSON response of a call" DisplayName="Message response" FieldName="Response" IsHidden="False" IsRequired="False">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                          </scg:List>
+                        </uiisi:ActivitySettings.Properties>
+                        <uiisi:ActivitySettings.PropertyCategories>
+                          <scg:List x:TypeArguments="uiisi:PropertyCategory" Capacity="0" />
+                        </uiisi:ActivitySettings.PropertyCategories>
+                      </uiisi:ActivitySettings>
+                      <uiisi:ActivitySettings x:Key="MakeCall" EnableSampleValues="False" EnableSampleValuesTest="False" ShowAllFields="True" ShowConfigureButton="False">
+                        <uiisi:ActivitySettings.ObjectsToExclude>
+                          <scg:List x:TypeArguments="x:String" Capacity="0" />
+                        </uiisi:ActivitySettings.ObjectsToExclude>
+                        <uiisi:ActivitySettings.Properties>
+                          <scg:List x:TypeArguments="uiisi:ActivityProperty" Capacity="8">
+                            <uiisi:ActivityProperty Description="The destination phone number" DisplayName="To" FieldName="body.To" IsHidden="False" IsRequired="True">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                            <uiisi:ActivityProperty Description="The source phone number. This number must be a registered Twilio number" DisplayName="From" FieldName="body.From" IsHidden="False" IsRequired="True">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                            <uiisi:ActivityProperty Description="The TwiML content of a call. Ex. &quot;&lt;Response&gt;&lt;Say&gt;Hi There&lt;/Say&gt;&lt;/Response&gt;&quot;. This is required if URL parameter has no value. URL field will be considered if both fields have values" DisplayName="Say" FieldName="body.Twiml" IsHidden="False" IsRequired="False">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                            <uiisi:ActivityProperty Description="The absolute URL that returns the TwiML instructions for the call" DisplayName="URL" FieldName="body.url" IsHidden="False" IsRequired="False">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                            <uiisi:ActivityProperty Description="The json response of a call." DisplayName="Call Response" FieldName="Response" IsHidden="False" IsRequired="False">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                          </scg:List>
+                        </uiisi:ActivitySettings.Properties>
+                        <uiisi:ActivitySettings.PropertyCategories>
+                          <scg:List x:TypeArguments="uiisi:PropertyCategory" Capacity="0" />
+                        </uiisi:ActivitySettings.PropertyCategories>
+                      </uiisi:ActivitySettings>
+                      <uiisi:ActivitySettings x:Key="AvailablePhoneNumbersLocal" EnableSampleValues="False" EnableSampleValuesTest="False" ShowAllFields="True" ShowConfigureButton="False">
+                        <uiisi:ActivitySettings.ObjectsToExclude>
+                          <scg:List x:TypeArguments="x:String" Capacity="0" />
+                        </uiisi:ActivitySettings.ObjectsToExclude>
+                        <uiisi:ActivitySettings.Properties>
+                          <scg:List x:TypeArguments="uiisi:ActivityProperty" Capacity="4">
+                            <uiisi:ActivityProperty Description="The country code for the phone numbers to list" DisplayName="Country code" FieldName="CountryCode" IsHidden="False" IsRequired="True">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                            <uiisi:ActivityProperty Description="The response of the available Local phone numbers." DisplayName="Response" FieldName="Response" IsHidden="False" IsRequired="False">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                          </scg:List>
+                        </uiisi:ActivitySettings.Properties>
+                        <uiisi:ActivitySettings.PropertyCategories>
+                          <scg:List x:TypeArguments="uiisi:PropertyCategory" Capacity="0" />
+                        </uiisi:ActivitySettings.PropertyCategories>
+                      </uiisi:ActivitySettings>
+                      <uiisi:ActivitySettings x:Key="AvailablePhoneNumbersMobile" EnableSampleValues="False" EnableSampleValuesTest="False" ShowAllFields="True" ShowConfigureButton="False">
+                        <uiisi:ActivitySettings.ObjectsToExclude>
+                          <scg:List x:TypeArguments="x:String" Capacity="0" />
+                        </uiisi:ActivitySettings.ObjectsToExclude>
+                        <uiisi:ActivitySettings.Properties>
+                          <scg:List x:TypeArguments="uiisi:ActivityProperty" Capacity="4">
+                            <uiisi:ActivityProperty Description="The country code for the phone numbers to list" DisplayName="Country code" FieldName="CountryCode" IsHidden="False" IsRequired="True">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                            <uiisi:ActivityProperty Description="The response of the available mobile phone numbers." DisplayName="Response" FieldName="Response" IsHidden="False" IsRequired="False">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                          </scg:List>
+                        </uiisi:ActivitySettings.Properties>
+                        <uiisi:ActivitySettings.PropertyCategories>
+                          <scg:List x:TypeArguments="uiisi:PropertyCategory" Capacity="0" />
+                        </uiisi:ActivitySettings.PropertyCategories>
+                      </uiisi:ActivitySettings>
+                      <uiisi:ActivitySettings x:Key="AvailablePhoneNumbersTollFree" EnableSampleValues="False" EnableSampleValuesTest="False" ShowAllFields="True" ShowConfigureButton="False">
+                        <uiisi:ActivitySettings.ObjectsToExclude>
+                          <scg:List x:TypeArguments="x:String" Capacity="0" />
+                        </uiisi:ActivitySettings.ObjectsToExclude>
+                        <uiisi:ActivitySettings.Properties>
+                          <scg:List x:TypeArguments="uiisi:ActivityProperty" Capacity="4">
+                            <uiisi:ActivityProperty Description="The country code for the phone numbers to list" DisplayName="Country code" FieldName="CountryCode" IsHidden="False" IsRequired="True">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                            <uiisi:ActivityProperty Description="The response of the available toll-free phone numbers." DisplayName="Response" FieldName="Response" IsHidden="False" IsRequired="False">
+                              <uiisi:ActivityProperty.OnValueCleared>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueCleared>
+                              <uiisi:ActivityProperty.OnValueSet>
+                                <scg:List x:TypeArguments="uiisi:PropertyValueChanged" Capacity="0" />
+                              </uiisi:ActivityProperty.OnValueSet>
+                            </uiisi:ActivityProperty>
+                          </scg:List>
+                        </uiisi:ActivitySettings.Properties>
+                        <uiisi:ActivitySettings.PropertyCategories>
+                          <scg:List x:TypeArguments="uiisi:PropertyCategory" Capacity="0" />
+                        </uiisi:ActivitySettings.PropertyCategories>
+                      </uiisi:ActivitySettings>
+                    </scg:Dictionary>
+                  </uiisi:ConnectorMetadata.ActivitiesSettings>
+                  <uiisi:ConnectorMetadata.GeneratedObjectMetadata>
+                    <scg:List x:TypeArguments="uiisi:ObjectMetadata" Capacity="16">
+                      <uiisi:ObjectMetadata DisplayName="Messages" Name="Messages" Path="/Messages" SubType="Standard" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getMessages">GET</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="createMessage">POST</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="replaceMessageByMessagesId">PUT</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="deleteMessageByMessagesId">DELETE</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="getMessageByMessagesId">GETBYID</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getMessages">/Messages</x:String>
+                            <x:String x:Key="createMessage">/Messages</x:String>
+                            <x:String x:Key="replaceMessageByMessagesId">/Messages/{messagesId}</x:String>
+                            <x:String x:Key="deleteMessageByMessagesId">/Messages/{messagesId}</x:String>
+                            <x:String x:Key="getMessageByMessagesId">/Messages/{messagesId}</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="4">
+                            <uiisi:PrimaryKey Description="Sid" DisplayName="SID" Name="sid" />
+                          </scg:List>
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Messages Feedback" Name="Messages::Feedback" Path="/Messages/{MessageSid}/Feedback" SubType="Standard" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="createMessageFeedback">POST</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="createMessageFeedback">/Messages/{MessageSid}/Feedback</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="0" />
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Usage Records" Name="Usage_Records" Path="/Usage_Records" SubType="Standard" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getUsage_Records">GET</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getUsage_Records">/Usage_Records</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="0" />
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Accounts" Name="Accounts" Path="/Accounts" SubType="Standard" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getAccounts">GET</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="createAccount">POST</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="replaceAccountByAccountsId">PUT</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="getAccountByAccountsId">GETBYID</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getAccounts">/Accounts</x:String>
+                            <x:String x:Key="createAccount">/Accounts</x:String>
+                            <x:String x:Key="replaceAccountByAccountsId">/Accounts/{accountsId}</x:String>
+                            <x:String x:Key="getAccountByAccountsId">/Accounts/{accountsId}</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="4">
+                            <uiisi:PrimaryKey Description="A 34 character string that uniquely identifies this account." DisplayName="SID" Name="sid" />
+                          </scg:List>
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Incoming Phone Numbers" Name="IncomingPhoneNumbers" Path="/IncomingPhoneNumbers" SubType="Standard" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getIncomingPhoneNumbers">GET</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="createIncomingPhoneNumber">POST</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="replaceIncomingPhoneNumberByIncomingPhoneNumbersId">PUT</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="deleteIncomingPhoneNumberByIncomingPhoneNumbersId">DELETE</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="getIncomingPhoneNumberByIncomingPhoneNumbersId">GETBYID</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getIncomingPhoneNumbers">/IncomingPhoneNumbers</x:String>
+                            <x:String x:Key="createIncomingPhoneNumber">/IncomingPhoneNumbers</x:String>
+                            <x:String x:Key="replaceIncomingPhoneNumberByIncomingPhoneNumbersId">/IncomingPhoneNumbers/{incomingPhoneNumbersId}</x:String>
+                            <x:String x:Key="deleteIncomingPhoneNumberByIncomingPhoneNumbersId">/IncomingPhoneNumbers/{incomingPhoneNumbersId}</x:String>
+                            <x:String x:Key="getIncomingPhoneNumberByIncomingPhoneNumbersId">/IncomingPhoneNumbers/{incomingPhoneNumbersId}</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="4">
+                            <uiisi:PrimaryKey Description="Sid" DisplayName="SID" Name="sid" />
+                          </scg:List>
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Available Phone Numbers" Name="AvailablePhoneNumbers" Path="/AvailablePhoneNumbers" SubType="Standard" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getAvailablePhoneNumbers">GET</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="getAvailablePhoneNumberByAvailablePhoneNumbersId">GETBYID</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getAvailablePhoneNumbers">/AvailablePhoneNumbers</x:String>
+                            <x:String x:Key="getAvailablePhoneNumberByAvailablePhoneNumbersId">/AvailablePhoneNumbers/{availablePhoneNumbersId}</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="4">
+                            <uiisi:PrimaryKey Description="Country_code" DisplayName="Country code" Name="country_code" />
+                          </scg:List>
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Addresses" Name="Addresses" Path="/Addresses" SubType="Standard" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getAddresses">GET</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="createAddresse">POST</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="replaceAddresseByAddressesId">PUT</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="deleteAddresseByAddressesId">DELETE</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="getAddresseByAddressesId">GETBYID</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getAddresses">/Addresses</x:String>
+                            <x:String x:Key="createAddresse">/Addresses</x:String>
+                            <x:String x:Key="replaceAddresseByAddressesId">/Addresses/{addressesId}</x:String>
+                            <x:String x:Key="deleteAddresseByAddressesId">/Addresses/{addressesId}</x:String>
+                            <x:String x:Key="getAddresseByAddressesId">/Addresses/{addressesId}</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="4">
+                            <uiisi:PrimaryKey Description="Sid" DisplayName="SID" Name="sid" />
+                          </scg:List>
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Available Phone Numbers Local" Name="AvailablePhoneNumbers::Local" Path="/AvailablePhoneNumbers/{CountryCode}/Local" SubType="Method" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getAvailablePhoneNumbersLocal">GET</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getAvailablePhoneNumbersLocal">/AvailablePhoneNumbers/{CountryCode}/Local</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="4">
+                            <uiisi:PrimaryKey Description="Phone_number" DisplayName="Phone number" Name="phone_number" />
+                          </scg:List>
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Available Phone Numbers Mobile" Name="AvailablePhoneNumbers::Mobile" Path="/AvailablePhoneNumbers/{CountryCode}/Mobile" SubType="Method" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getAvailablePhoneNumbersMobile">GET</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getAvailablePhoneNumbersMobile">/AvailablePhoneNumbers/{CountryCode}/Mobile</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="4">
+                            <uiisi:PrimaryKey Description="Phone_number" DisplayName="Phone number" Name="phone_number" />
+                          </scg:List>
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Calls Feedback" Name="Calls::Feedback" Path="/Calls/{CallSid}/Feedback" SubType="Standard" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getCallsFeedback">GET</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getCallsFeedback">/Calls/{CallSid}/Feedback</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="4">
+                            <uiisi:PrimaryKey Description="Sid" DisplayName="SID" Name="sid" />
+                          </scg:List>
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Calls Recordings" Name="Calls::Recordings" Path="/Calls/{CallSid}/Recordings" SubType="Standard" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getCallsRecordings">GET</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getCallsRecordings">/Calls/{CallSid}/Recordings</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="4">
+                            <uiisi:PrimaryKey Description="Sid" DisplayName="SID" Name="sid" />
+                          </scg:List>
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Messages Media" Name="Messages::Media" Path="/Messages/{MessageSid}/Media" SubType="Standard" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getMessagesMedia">GET</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="deleteMessagesMediaByMediaId">DELETE</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="getMessagesMediaByMediaId">GETBYID</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getMessagesMedia">/Messages/{MessageSid}/Media</x:String>
+                            <x:String x:Key="deleteMessagesMediaByMediaId">/Messages/{MessageSid}/Media/{mediaId}</x:String>
+                            <x:String x:Key="getMessagesMediaByMediaId">/Messages/{MessageSid}/Media/{mediaId}</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="4">
+                            <uiisi:PrimaryKey Description="Sid" DisplayName="SID" Name="sid" />
+                          </scg:List>
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Available Phone Numbers Toll Free" Name="AvailablePhoneNumbers::TollFree" Path="/AvailablePhoneNumbers/{CountryCode}/TollFree" SubType="Method" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getAvailablePhoneNumbersTollFree">GET</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getAvailablePhoneNumbersTollFree">/AvailablePhoneNumbers/{CountryCode}/TollFree</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="4">
+                            <uiisi:PrimaryKey Description="Phone_number" DisplayName="Phone number" Name="phone_number" />
+                          </scg:List>
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Calls Events" Name="Calls::Events" Path="/Calls/{CallSid}/Events" SubType="Standard" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getCallsEvents">GET</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getCallsEvents">/Calls/{CallSid}/Events</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="0" />
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Calls" Name="Calls" Path="/Calls" SubType="Standard" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getCalls">GET</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="createCall">POST</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="replaceCallByCallsId">PUT</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="deleteCallByCallsId">DELETE</uiisi:ResourceMethod>
+                            <uiisi:ResourceMethod x:Key="getCallByCallsId">GETBYID</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getCalls">/Calls</x:String>
+                            <x:String x:Key="createCall">/Calls</x:String>
+                            <x:String x:Key="replaceCallByCallsId">/Calls/{callsId}</x:String>
+                            <x:String x:Key="deleteCallByCallsId">/Calls/{callsId}</x:String>
+                            <x:String x:Key="getCallByCallsId">/Calls/{callsId}</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="4">
+                            <uiisi:PrimaryKey Description="Sid" DisplayName="SID" Name="sid" />
+                          </scg:List>
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                      <uiisi:ObjectMetadata DisplayName="Addresses Dependent Phone Numbers" Name="Addresses::DependentPhoneNumbers" Path="/Addresses/{AddressId}/DependentPhoneNumbers" SubType="Standard" Type="Standard">
+                        <uiisi:ObjectMetadata.OperationIdToMethod>
+                          <scg:Dictionary x:TypeArguments="x:String, uiisi:ResourceMethod">
+                            <uiisi:ResourceMethod x:Key="getAddressesDependentPhoneNumbers">GET</uiisi:ResourceMethod>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToMethod>
+                        <uiisi:ObjectMetadata.OperationIdToPath>
+                          <scg:Dictionary x:TypeArguments="x:String, x:String">
+                            <x:String x:Key="getAddressesDependentPhoneNumbers">/Addresses/{AddressId}/DependentPhoneNumbers</x:String>
+                          </scg:Dictionary>
+                        </uiisi:ObjectMetadata.OperationIdToPath>
+                        <uiisi:ObjectMetadata.PrimaryKeys>
+                          <scg:List x:TypeArguments="uiisi:PrimaryKey" Capacity="4">
+                            <uiisi:PrimaryKey Description="Sid" DisplayName="SID" Name="sid" />
+                          </scg:List>
+                        </uiisi:ObjectMetadata.PrimaryKeys>
+                      </uiisi:ObjectMetadata>
+                    </scg:List>
+                  </uiisi:ConnectorMetadata.GeneratedObjectMetadata>
+                  <uiisi:ConnectorMetadata.Lookups>
+                    <scg:List x:TypeArguments="uiisi:Lookup" Capacity="4">
+                      <uiisi:Lookup DisplayName="Get Twilio Numbers" LoadByDefault="True" Name="GetTwilioNumbers" OutputArgument="phone_number" Resource="IncomingPhoneNumbers">
+                        <uiisi:Lookup.ActivityBindings>
+                          <scg:List x:TypeArguments="uiisi:ActivityBinding" Capacity="4">
+                            <uiisi:ActivityBinding ActivityNames="SendMessage" FieldName="Messages.body.From" />
+                            <uiisi:ActivityBinding ActivityNames="MakeCall" FieldName="Calls.body.From" />
+                          </scg:List>
+                        </uiisi:Lookup.ActivityBindings>
+                        <uiisi:Lookup.DisplayProperties>
+                          <scg:List x:TypeArguments="uiisi:LookupDisplayProperty" Capacity="4">
+                            <uiisi:LookupDisplayProperty DisplayName="Phone Number" Name="phone_number" />
+                          </scg:List>
+                        </uiisi:Lookup.DisplayProperties>
+                      </uiisi:Lookup>
+                    </scg:List>
+                  </uiisi:ConnectorMetadata.Lookups>
+                  <uiisi:ConnectorMetadata.ParametersToExclude>
+                    <scg:List x:TypeArguments="x:String" Capacity="4">
+                      <x:String>Authorization</x:String>
+                    </scg:List>
+                  </uiisi:ConnectorMetadata.ParametersToExclude>
+                  <uiisi:ConnectorMetadata.RequiredFields>
+                    <scg:Dictionary x:TypeArguments="x:String, scg:List(x:String)">
+                      <scg:List x:TypeArguments="x:String" x:Key="messages: getmessages" Capacity="4">
+                        <x:String>authorization</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="messages: createmessage" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>body</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="messages: getmessagebymessagesid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>messagesid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="messages: replacemessagebymessagesid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>messagesid</x:String>
+                        <x:String>body</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="messages: deletemessagebymessagesid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>messagesid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="messages__feedback: createmessagefeedback" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>messagesid</x:String>
+                        <x:String>body</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="usage_records: getusage_records" Capacity="4">
+                        <x:String>authorization</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="accounts: getaccounts" Capacity="4">
+                        <x:String>authorization</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="accounts: createaccount" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>body</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="accounts: getaccountbyaccountsid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>accountsid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="accounts: replaceaccountbyaccountsid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>accountsid</x:String>
+                        <x:String>body</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="incomingphonenumbers: getincomingphonenumbers" Capacity="4">
+                        <x:String>authorization</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="incomingphonenumbers: createincomingphonenumber" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>body</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="incomingphonenumbers: getincomingphonenumberbyincomingphonenumbersid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>incomingphonenumbersid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="incomingphonenumbers: replaceincomingphonenumberbyincomingphonenumbersid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>incomingphonenumbersid</x:String>
+                        <x:String>body</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="incomingphonenumbers: deleteincomingphonenumberbyincomingphonenumbersid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>incomingphonenumbersid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="availablephonenumbers: getavailablephonenumbers" Capacity="4">
+                        <x:String>authorization</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="availablephonenumbers: getavailablephonenumberbyavailablephonenumbersid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>availablephonenumbersid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="addresses: getaddresses" Capacity="4">
+                        <x:String>authorization</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="addresses: createaddresse" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>body</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="addresses: getaddressebyaddressesid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>addressesid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="addresses: replaceaddressebyaddressesid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>addressesid</x:String>
+                        <x:String>body</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="addresses: deleteaddressebyaddressesid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>addressesid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="availablephonenumbers__local: getavailablephonenumberslocal" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>countrycode</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="availablephonenumbers__mobile: getavailablephonenumbersmobile" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>countrycode</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="calls__feedback: getcallsfeedback" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>callsid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="calls__recordings: getcallsrecordings" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>callsid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="messages__media: getmessagesmedia" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>messagesid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="messages__media: getmessagesmediabymediaid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>messagesid</x:String>
+                        <x:String>mediaid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="messages__media: deletemessagesmediabymediaid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>messagesid</x:String>
+                        <x:String>mediaid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="availablephonenumbers__tollfree: getavailablephonenumberstollfree" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>countrycode</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="calls__events: getcallsevents" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>callsid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="calls: getcalls" Capacity="4">
+                        <x:String>authorization</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="calls: createcall" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>body</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="calls: getcallbycallsid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>callsid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="calls: replacecallbycallsid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>callsid</x:String>
+                        <x:String>body</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="calls: deletecallbycallsid" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>callsid</x:String>
+                      </scg:List>
+                      <scg:List x:TypeArguments="x:String" x:Key="addresses__dependentphonenumbers: getaddressesdependentphonenumbers" Capacity="4">
+                        <x:String>authorization</x:String>
+                        <x:String>addressid</x:String>
+                      </scg:List>
+                    </scg:Dictionary>
+                  </uiisi:ConnectorMetadata.RequiredFields>
+                </uiisi:ConnectorMetadata>
+              </uiisi:ClientInfo.ConnectorMetadata>
+            </uiisi:ClientInfo>
+          </uiisi:ConnectionParameters.ClientInfo>
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.Twilio.IntegrationService.Activities" ActivityPackVersion="4.0.5" Source="studio" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </utia:SendMessage.DesignConnectionRequest>
+      <utia:SendMessage.SelectedFields>
+        <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
+          <x:Reference>__ReferenceID1</x:Reference>
+          <x:Reference>__ReferenceID2</x:Reference>
+          <x:Reference>__ReferenceID3</x:Reference>
+          <x:Reference>__ReferenceID4</x:Reference>
+        </scg:List>
+      </utia:SendMessage.SelectedFields>
+      <utia:SendMessage.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </utia:SendMessage.TelemetryProperties>
+    </utia:SendMessage>
+  </Sequence>
+</Activity>
